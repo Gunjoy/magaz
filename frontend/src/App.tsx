@@ -17,7 +17,6 @@ function App() {
       <header className="App-header">
         <Navbar></Navbar>
       </header>
-        
           <Routes>
                 <Route path='/' element={<Hompage/>}/>
                 <Route path='/sale' element={<Sale/>}/>
@@ -25,9 +24,8 @@ function App() {
                 <Route path='/home-electronics' element={<HomeElectronik/>}></Route>
                 <Route path='/smartphones' element={<Smartphones/>}></Route>
                 <Route path='/video_technika' element={<VideoTechnik/>}></Route>
-              
           </Routes>
-        
+          <img height={300} src='http://localhost:3001/image.JPG'></img>
     </div>
   );
 }
