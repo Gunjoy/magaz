@@ -1,17 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import CardList from "./card-list";
 type TypeInitValItems = [{
     id: string,
     name: string,
     price: string,
-    message: string
+    message: string,
+    image: string
 }]
 const initValItems : TypeInitValItems = [{
     id: '1',
     name:'ffdf',
     price: '123',
-    message: 'ffdf'
+    message: 'ffdf',
+    image: 'а'
 }]
 
 let Sale = () => {
@@ -27,8 +29,10 @@ let Sale = () => {
     return(
         <div className="saled_contaner">
             {discountItems.map((item, index) => {
-                return(<ul className="saled_ui">
-                        <li className= 'saled index' key={index.toString()}>{item.id} {item.name} {item.price} {item.message}</li>
+                return(
+                <ul className="saled_ui">
+                        {/* <li className= 'saled index' key={index.toString()}>{item.id} {item.name} {item.price} {item.message}</li> */}
+                        <CardList data = {item}></CardList>
                 </ul>)
             })}
         </div>
@@ -36,4 +40,4 @@ let Sale = () => {
 
 export default Sale
 
-// Нужно сделать отдельный компонент для того чтобы мапать массив.
+// Не работают пропсы

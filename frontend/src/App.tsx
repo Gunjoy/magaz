@@ -8,6 +8,7 @@ import HomeElectronik from './lists/home-electronics'
 import Smartphones from './lists/smartphones'
 import VideoTechnik from './lists/video-technik'
 import Hompage from './lists/hompage'
+import CardList  from './lists/card-list';
 
 import './App.css';
 
@@ -17,6 +18,20 @@ function App() {
       <header className="App-header">
         <Navbar></Navbar>
       </header>
+              <div className='main-body-layout'>
+                <div className='filter-in-body'>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                  <h1>фильтр</h1>
+                </div>
           <Routes>
                 <Route path='/' element={<Hompage/>}/>
                 <Route path='/sale' element={<Sale/>}/>
@@ -25,7 +40,10 @@ function App() {
                 <Route path='/smartphones' element={<Smartphones/>}></Route>
                 <Route path='/video_technika' element={<VideoTechnik/>}></Route>
           </Routes>
-          <img height={300} src='http://localhost:3001/image.JPG'></img>
+
+              
+              </div>
+          
     </div>
   );
 }

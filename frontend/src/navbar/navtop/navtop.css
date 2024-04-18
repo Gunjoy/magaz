@@ -3,6 +3,7 @@
 .header-top{
     /* background-color: rgb(255, 255, 255); */
     height: 40px;
+    background-color: white;
 }
 .header-top-menu{
     display: flex; 

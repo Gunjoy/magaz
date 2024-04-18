@@ -1,4 +1,17 @@
+.App{
+    background-color: rgb(224, 224, 224);
+}
 body {
 margin: 0px;
 padding: 0px;
+}
+.filter-in-body{
+    width: 350px;
+    height: 100%;
+    padding-left: 50px;
+}
+.main-body-layout{
+    display: flex;
+    width: fit-content;
+    
 }
