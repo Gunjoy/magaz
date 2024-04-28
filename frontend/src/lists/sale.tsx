@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link} from "react-router-dom";
 import CardList from "./card-list";
 type TypeInitValItems = [{
     id: string,
@@ -20,7 +21,7 @@ let Sale = () => {
     const [discountItems, setDiscountItems] = useState(initValItems)
     
     useEffect(()=>{
-        fetch("/api")
+        fetch("/sale")
         .then((response) => response.json())
         .then(response => setDiscountItems(response))
     },[])
@@ -31,8 +32,9 @@ let Sale = () => {
             {discountItems.map((item, index) => {
                 return(
                 <ul className="saled_ui">
-                        {/* <li className= 'saled index' key={index.toString()}>{item.id} {item.name} {item.price} {item.message}</li> */}
-                        <CardList data = {item}></CardList>
+                        
+                        <CardList data = {item} key= {item.id}></CardList>
+                        
                 </ul>)
             })}
         </div>

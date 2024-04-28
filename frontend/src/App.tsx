@@ -1,18 +1,21 @@
 import React from 'react';
 import {Routes, Route} from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 import Navbar from './navbar/navtop/navtop';
 import Sale from './lists/sale'
+import {SinglePage} from './lists/singlepPage'
 import AudioTechnika from'./lists/audo-technik'
 import HomeElectronik from './lists/home-electronics'
 import Smartphones from './lists/smartphones'
 import VideoTechnik from './lists/video-technik'
 import Hompage from './lists/hompage'
-import CardList  from './lists/card-list';
+
 
 import './App.css';
 
 function App() {
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -35,6 +38,7 @@ function App() {
           <Routes>
                 <Route path='/' element={<Hompage/>}/>
                 <Route path='/sale' element={<Sale/>}/>
+                <Route path='/sale/:singltpageItemId' element={<SinglePage/>}/>
                 <Route path='/audio' element={<AudioTechnika/>}></Route>
                 <Route path='/home-electronics' element={<HomeElectronik/>}></Route>
                 <Route path='/smartphones' element={<Smartphones/>}></Route>
