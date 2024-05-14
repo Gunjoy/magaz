@@ -15,7 +15,7 @@ const CardList = ({data}:any) => {
         <div className="card-list-data-container">
             <div className="card-list-data">
                 <h1 className="dataName">{data.name}</h1>
-                <h1 className="dataPrice">{data.price} РУБАСОВ</h1>
+                <h1 className="dataPrice">{data.price} Рублей</h1>
                 <h1 className="dataMessage">{data.message}</h1>
             </div>
             

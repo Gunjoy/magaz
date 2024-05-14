@@ -11,3 +11,4 @@ const SinglePage = () => {
     )
 }
 export {SinglePage}
+
